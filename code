@@ -1,0 +1,1041 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>project3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" type="image" href="logo2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <style>
+    .*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.top-navbar{
+    width: 100%;
+    height: 7vh;
+    background-image: linear-gradient( #c48f7f, #CBA3B2);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+.top-icons{
+    margin-left: 45px;
+}
+.top-icons i{
+    font-size: 20px;
+    cursor: pointer;
+    color: #5c373d;
+    margin-left: 10px;
+}
+.other-links{
+    margin-right: 40px;
+}
+.other-links i{
+    color: #5c373d;
+    margin-left: 10px;
+    font-size: 20px;
+}
+#btn-login{
+    width: 100px;
+    border: 2px solid #F19CBB;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 5vh;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#btn-login a{
+    text-decoration: none;
+    color: #F19CBB;
+    transition: 0.5s ease;
+}
+#btn-login a:hover{
+    background-color:#F19CBB;
+    color: white;
+}
+#btn-login:hover{
+    background-color: #F19CBB;
+    color: white;
+}
+#btn-signup{
+    width: 100px;
+    border: 2px solid #F19CBB;
+    color: #F19CBB;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 5vh;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#btn-signup a{
+    text-decoration: none;
+    color: #F19CBB;
+    transition: 0.5s ease;
+}
+#btn-signup a:hover{
+    background-color: #F19CBB;
+    color: white;
+}
+#btn-signup:hover{
+    background-color: #F19CBB;
+    color: white;
+}
+@media screen and (max-width:500px){
+    .top-icons{
+        margin-left: 30px;
+    }
+    .top-icons i{
+        font-size: 15px;
+    }
+    .other-links i{
+        font-size: 15px;
+    }
+    #btn-login{
+        width: 60px;
+        height: 5vh;
+    }
+    #btn-signup{
+        width: 70px;
+        height: 5vh;
+    }
+}    
+@media screen and (max-width:350px){
+    .top-icons{
+        margin-left: 10px;
+    }
+    .top-icons i{
+        font-size: 10px;
+    }
+    .other-links{
+        margin-right: 10px;
+    }
+    .other-links i{
+        font-size: 10px;
+    }
+    #btn-login{
+        width: 50px;
+        height: 5vh;
+        font-size: 13px;
+    }
+    #btn-signup{
+        width: 60px;
+        height: 5vh;
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:350px){
+    .top-icons{
+        margin-left: 5px;
+    }
+    .top-icons i{
+        font-size: 12px;
+    }
+    .other-links{
+        margin-right: 10px;
+    }
+    .other-links i{
+        font-size: 12px;
+    }
+    #btn-login{
+        width: 40px;
+        height: 5vh;
+        font-size: 10px;
+    }
+    #btn-signup{
+        width: 50px;
+        height: 5vh;
+        font-size: 10px;
+    }
+}
+
+.home-section{
+    width: 100%;
+    height: 10vh;
+    background-color: #45292d;
+    
+}
+
+#navbar{
+    background-image: linear-gradient(#c48f7f, #5c373d);
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    
+    
+}
+#navbar .nav-link{
+    color:  #F19CBB;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: 0.5s ease;
+    
+}
+#navbar .nav-link:hover{
+    color: #5c373d;
+    border-radius: 5px;
+}
+.dropdown li a{
+    color: #5c373d;
+    background-color: white;
+    
+}
+#search-btn{
+    
+    border:  1px solid  white ;
+}
+#search-btn:hover{
+    background-color: whitesmoke;
+}
+
+.home{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    font-family: 'Roboto Slab', serif;
+  background-image: url(bkgg.gif);
+  background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home .img{
+    flex: 1 1 400px;
+}
+.home .img img{
+    width: 100%;
+}
+.home .content{
+    flex: 1 1 400px;
+    margin-top: 30px;
+}
+.content h3{
+    margin-left: 70px;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px #5c373d;
+    color: #B76E79 ;
+    font-weight: bold;
+}
+.content h3 span{
+    font-size: 40px;
+}
+.content p{
+    margin-left: 70px;
+    text-shadow: 1px 1px 1px #5c373d;
+    color: #B76E79;
+    font-size: 18px;
+}
+.content #shopnow{
+    margin-left: 70px;
+    width: 200px;
+    height: 38px;
+    border: 2px solid #5c373d;
+    font-weight: bold;
+    transition: 0.5s ease;
+    background-color:#F19CBB ;
+    cursor: pointer;
+}
+.content #shopnow:hover{
+    background-color:  #c48f7f;
+    color: white;
+}
+@media screen and (max-width:800px){
+    .content h3{
+        margin-left: 50px;
+        font-size: 40px;
+    }
+    .content p{
+        margin-left: 50px;
+    }
+    .content #shopnow{
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width:570px){
+    .content h3{
+        margin-left: 20px;
+    }
+    .content p{
+        margin-left: 20px;
+    }
+    .content #shopnow{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width:799px){
+    .home-section{
+        height: 150vh;
+    }
+}
+@media screen and (max-width:550px){
+    .home-section{
+        height: 100vh;
+    }
+}
+
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    font-family: 'Roboto Slab', serif;
+  background-repeat: no-repeat;
+    background-size: cover;
+    background image:url(OIP.jpeg);
+    background-color: hotpink;
+}
+
+#top-cards{
+    margin-top: 30px;
+    font-family: 'Roboto Slab', serif;
+    box-shadow: inset -2px 2px 2px white;
+}
+#top-cards .card img{
+   background image: url(cv.png);
+    height: 60vh;
+}
+#top-cards h5{
+    color: #F19CDA;
+    font-weight: bold;
+}
+#top-cards button{
+    width: 150px;
+    height: 33px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background: transparent;
+    color: #F19CBB;
+    border: 2px solid #5c373d;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#top-cards button:hover{
+    background-color: #c48f7f;
+    color: white;
+}
+
+.banner{
+    width: 100%;
+    height: 50vh;
+    margin-top: 50px;
+    background-image: linear-gradient(to right, #5c373d, #F19Cbb);
+}
+.banner .content{
+    text-align: center;
+    padding-top: 100px;
+
+}
+.banner .content h1{
+    color: #F19CDA;
+    text-shadow: 1px 1px 1px #5c373d;
+    letter-spacing: 3px;
+}
+.banner .content p{
+    color: #c48f7f;
+    text-shadow: 1px 1px 1px #5c373d;
+    letter-spacing: 3px;
+}
+#bannerbtn button{
+    width: 150px;
+    height: 38px;
+    background: transparent;
+    color: #F19CDA;
+    border: 2px solid #F19Cbb;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#bannerbtn button:hover{
+    background-color: #5c373d;
+    border: none;
+}
+
+.banner2{
+    width: 100%;
+    height: 50vh;
+    margin-top: 50px;
+    background-image: linear-gradient(to right, #5c373d, #F19CDA);
+}
+.banner2 .content2{
+    text-align: center;
+    padding-top: 100px;
+}
+.banner2 .content2 h1{
+    color: #B76E79;
+    text-shadow: 1px 1px 1px #5c373d;
+    letter-spacing: 3px;
+}
+.banner2 .content2 p{
+    color: #B76E79;
+    text-shadow: 1px 1px 1px #5c373d;
+    letter-spacing: 3px;
+}
+#bannerbtn2 button{
+    width: 150px;
+    height: 38px;
+    background: transparent;
+    color: #B76E79;
+    border: 2px solid #F19CBB;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#bannerbtn2 button:hover{
+    background-color: #5c373d;
+    border: none;
+}
+
+
+#product-cards{
+    font-family: 'Roboto Slab', serif;
+    margin-top: 100px;
+
+    
+}
+#product-cards .card{
+    background image: url(cv.png);
+    box-shadow: rgba(92,55,61, 0.5);inset -2px 2px 2px; 
+
+    yellow;
+     
+}
+#product-cards h1{
+    margin-top: 30px;
+    color: #A8516E ;
+    font-style: italic;
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px #5c373d;
+}
+#product-cards p{
+    color: #F19CBB;
+}
+#product-cards h5{
+    color: #F19CBB;
+}
+#product-cards h3{
+    letter-spacing: 3px;
+    color:#B76E79;
+    text-shadow: 0px 1px 1px #5c373d;
+    font-weight: bold;
+}
+#product-cards h5 span{
+    background: rgba(92,55,61, 0.5)
+    float: right;
+    color: #F19CBB;
+    cursor: pointer;
+}
+.checked{
+    color: rgb(229, 43, 80);
+}
+#viewmorebtn{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-decoration: none;
+    margin-top: 30px;
+    width: 200px;
+    height: 32px;
+    color: #B76E79;
+    letter-spacing: 5px;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid #B76E79;
+    transition: 0.5s ease;
+}
+#viewmorebtn:hover{
+    background-color: #c48f7f;
+    color: white;
+}
+
+
+#offer{
+    margin-top: 50px;
+}
+#offer i{
+    font-size: 60px;
+    color: #5c373d;
+}
+#offer h5{
+    color: #c48f7f;
+}
+#offer p{
+    color: #c48f7f;
+}
+
+
+#footer{
+    padding: 0 0 30px 0;
+    color: #5c373d;
+    font-size: 14px;
+    background-image: linear-gradient(#5c373d, #B76E79);
+    font-family: 'Roboto Slab', serif;
+}
+#footer .footer-top{
+    padding: 60px 0 30px;
+    background-image: linear-gradient(#5c373d, #B76E79);
+    color:#F19CBB;
+}
+#footer .footer-top .footer-contact h3{
+    color: #F19CBB;
+    text-shadow: 1px 1px 1px #5c373d;
+}
+#footer .footer-top .footer-contact h4{
+    font-size: 22px;
+    margin:  0 0 300px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 700;
+}
+#footer .footer-top .footer-contact p{
+    font-size: 14px;
+    margin: 0;
+    color: #F19CBB;
+    line-height: 1;
+    font-weight: 700;
+}
+#footer .footer-top h4{
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 12px;
+}
+#footer .footer-top .footer-links{
+    margin-bottom: 30px;
+    color: #F19CBB;
+}
+#footer .footer-top .footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+#footer .footer-top .footer-links ul li{
+    padding-right: 10px 0;
+    display: flex;
+    align-items: center;
+    color: #F19CBB;
+}
+#footer .footer-top .footer-links ul li:first-child{
+    padding: 0;
+}
+#footer .footer-top .footer-links ul li a{
+    color: #F19CBB;
+    line-height: 2;
+}
+#footer .footer-top .socail-links a{
+    font-size: 18px;
+    display: inline-block;
+    color: #F19CBB;
+    line-height: 1;
+    padding-right: 4px;
+    border-radius: 50px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.5s ease;
+}
+#footer .copyright{
+    text-align: center;
+    float: left; 
+}
+#footer .credits{
+    float: right;
+    text-align: center;
+}
+
+#about{
+    margin-top: 50px;
+}
+#about h1{
+    text-align: center;    
+    font-weight: bold;
+    color: #c48f7f;
+}
+
+
+#contact{
+    margin-top: 50px;
+}
+#contact h1{
+    color: #F19CBB;
+    text-shadow: 0px 0px 1px #5c373d;
+}
+#contact .card{
+    height: 80px;
+    margin-top: 20px;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    background: none;
+}
+#contact .card i{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #c48f7f;
+    font-weight: bold;
+    letter-spacing: 3px;
+    
+}
+#contact .card h6{
+    margin-left: 10px;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #c48f7f;
+}#messagebtn button{
+    margin-top: 30px;
+    width: 200px;
+    height: 33px;
+    background: transparent;
+    border: 2px solid #F19CBB;
+    color: #c48f7f;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: 0.5s ease;
+}
+#messagebtn button:hover{
+    background-color: #5c373d;
+    color: white;
+}
+
+.login{
+    width: 50%;
+    margin: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+#side1{
+    background-image: linear-gradient(#5c373d , #c48f7f);
+    height: 76vh;
+    border-radius: 5px;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+}
+#side1 h3{
+    color: #F19CBB;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #5c373d;
+    margin-top: 200px;
+    align-items: center;
+    text-align: center;
+}
+#side1 p{
+    color: #F19CBB;    
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+#btn{
+    align-items: center;
+    text-align: center;
+    border: 2px solid #5c373d;
+    border-radius: 10px;
+    
+}
+#btn a{
+    text-decoration: none;
+    color: #F19CBB;
+}
+#side2{
+    background-image: linear-gradient(#c48f7f , #5c373d);
+    border-radius: 5px;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    align-items: center;
+    text-align: center;
+}
+#side2 h3{
+    margin-top: 50px;
+    color: #5c373d;
+    font-weight: bold;
+}
+#side2 .inp{
+    margin-top: 32px;
+    
+}
+#side2 input{
+    width: 500px;
+    margin-top: 20px;
+    height: 36px;
+    align-items: center;
+    background: none;
+    
+}
+#side2 p{
+    margin-top: 20px;
+    cursor: pointer;
+    color: #000;
+}
+#side2 .icons i{
+    margin-left: 10px;
+    cursor: pointer;
+    color: #000;
+}
+#login{
+    margin-top: 10px;
+}
+#login button{
+    width: 200px;
+    height: 32px;
+    color: #c48f7f;
+    background-color: #5c373d;
+    border: none;
+    font-weight: bold;
+}
+@media screen and (max-width:992px){
+    #side2 input{
+        width: 300px;
+    }
+}
+@media screen and (max-width:330x){
+    #side2 input{
+        width: 200px;
+    }
+}"></style>
+    <div class="top-navbar">
+      <div class="top-icons">
+          <i class="fab fa-twitter fa-x"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div class="other-links">
+          <button id="btn-login"><a href="login.html">Login</a></button>
+          <button id="btn-signup"><a href="signup.html">Sign up</a></button>
+
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+  </div>
+
+  <div class="home-section">
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: #F19CBB; border: #5c373d;
+        font-size: 50px;> <img src="https://www.freepnglogos.com/uploads/perfume/perfume-logo-perfume-bottle-with-heart-vectors-logos-icons-and-9.png"  alt="logo" width="100px" height="80px" > naabz </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fa-solid fa-bars" style="color: white;"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="project3.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clothe.html">Products</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Catagory
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #5c373d;">
+                <li><a class="dropdown-item" href="#">perfume </a></li>
+                <li><a class="dropdown-item" href="#"> Eau de Perfume</a></li>
+                <li><a class="dropdown-item" href="#"> Eau de Toilette,</a></li>
+                <li><a class="dropdown-item" href="#">Eau de Cologne,</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="color: #F19CBB; border: 1px solid #c48f7f;">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <section class="home">
+    <div class="content">
+        <h3>Biggest Perfume Sale
+            <br> <span>Up To 50% Off</span>
+        </h3>
+        <button id="shopnow">Shop Now</button>    
+</section>
+<div class="container" id="top-cards" >
+  <div class="row">
+      <div class="col-md-5 py-3 py-md-0">
+          <div class="card" style="background-color: #45292d;">
+              <img src="C:\xampp\htdocs\p.png" alt="" >
+              <div class="card-img-overlay">
+                  <h5 class="card-title">Memories</h5>
+                  <p style="color: #CBA3B2;">Gift your friend.</p>
+                  <p style="color: #CBA3B2;"><strong>£30 </strong></p>
+                  <button>Order Now</button>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+          <div class="card" style="background-color: #45292d;">
+              <img src="C:\xampp\htdocs\p.png" alt="">
+              <div class="card-img-overlay">
+                  <h5 class="card-title">High Life</h5>
+                  <p style="color: #CBA3B2;">Gift your friend.</p>
+                  <p style="color: #CBA3B2;"><strong>£30 </strong></p>
+                  <button>Order Now</button>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+          <div class="card" style="background-color: #45292d;">
+              <img src="C:\xampp\htdocs\p.png" alt="">
+              <div class="card-img-overlay">
+                  <h5 class="card-title">Alurre</h5>
+                  <p style="color: #CBA3B2;">Gift your friend.</p>
+                  <p style="color: #CBA3B2;"><strong>£20 </strong></p>
+                  <button>Order Now</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="banner">
+  <div class="content">
+      <h1>Get Up To 50% Off</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, animi?</p>
+      <div id="bannerbtn"><button>SHOP NOW</button></div>
+  </div>
+</div>
+<div class="container" id="product-cards" >
+  <h1 class="text-center">PRODUCT</h1>
+  <div class="row" style="margin-top: 30px;">
+      <div class="col-md-3 py-3 py-md-0">
+          <div class="card" style="background: #B76E79);">
+              <img src="C:\xampp\htdocs\prm.png" alt="" height="260">
+              <div class="card-body">
+                  <h3>Epic</h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <div class="star">
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                  </div>
+                  <h5>£32 <span><i class="fa-solid fa-cart-shopping"></i></span></h5>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <img src="C:\xampp\htdocs\perfume.png" alt="" height="260">
+              <div class="card-body">
+                  <h3>Epic 2</h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <div class="star">
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                  </div>
+                  <h5>£50 <span><i class="fa-solid fa-cart-shopping"></i></span></h5>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <img src="C:\xampp\htdocs\prm.png" alt="" height="260">
+              <div class="card-body">
+                  <h3>Liquid Gold </h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <div class="star">
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                  </div>
+                  <h5>£80  <span><i class="fa-solid fa-cart-shopping"></i></span></h5>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <img src="C:\xampp\htdocs\perfume.png" alt="" height="260">
+              <div class="card-body">
+                  <h3>Marina</h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <div class="star">
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                  </div>
+                  <h5>£30  <span><i class="fa-solid fa-cart-shopping"></i></span></h5>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row" style="margin-top: 30px;" >
+      <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <img src="C:\xampp\htdocs\prm.png" alt="" height="260">
+              <div class="card-body">
+                  <h3>Poem</h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <div class="star">
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                  </div>
+                  <h5>£12  <span><i class="fa-solid fa-cart-shopping"></i></span></h5>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <img src="C:\xampp\htdocs\perfume.png" alt="" height="260">
+              <div class="card-body">
+                  <h3>Mystic</h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <div class="star">
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                  </div>
+                  <h5>£10 <span><i class="fa-solid fa-cart-shopping"></i></span></h5>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <img src="C:\xampp\htdocs\prm.png" alt="" height="260">
+              <div class="card-body">
+                  <h3>Spring</h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <div class="star">
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                  </div>
+                  <h5>£20 <span><i class="fa-solid fa-cart-shopping"></i></span></h5>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <img src="C:\xampp\htdocs\perfume.png" alt="" height="260">
+              <div class="card-body">
+                  <h3>Stardom</h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <div class="star">
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                      <i class="fas fa-star checked"></i>
+                  </div>
+                  <h5><span><i class="fa-solid fa-cart-shopping"></i></span></h5>
+              </div>
+          </div>
+      </div>
+  </div>
+  <a href="clothe.html" id="viewmorebtn">View More</a>
+</div>
+
+<div class="container" id="offer">
+  <div class="row">
+      <div class="col-md-4 py-3 py-md-0">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h5>Free Shipping</h5>
+          <p>On order over £80</p>
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+          <i class="fa-solid fa-truck"></i>
+          <h5>Fast Delivery</h5>
+          <p>World wide</p>
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h5>Big Choice</h5>
+          <p>Of product</p>
+      </div>
+  </div>
+</div>
+<footer id="footer" style="margin-top: 50px;">
+  <div class="footer-top">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6 footer-content">
+                  <h3>Naabz Perfume</h3>
+                  <p>The fragrance you desire</p>
+                  <p>
+                      London<br>
+                      United Kingdom<br>
+                  </p>
+                  <strong><i class="fas fa-phone"></i> Phone: <strong>+44 </strong></strong><br>
+                  <strong><i class="fa-solid fa-envelope"></i> Email: <strong>example@gmail.com</strong></strong>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Usefull Links</h4>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Privacy policay</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Our Services</h4>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, rem!</p>
+                  <ul>
+                      <li><a href="#">perfumes</a></li>
+                      
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Our Social Network</h4>
+                  <div class="socail-links mt-3">
+                      <a href="#" class="twiiter"><i class="fa-brands fa-twitter"></i></a>
+                      <a href="#" class="twiiter"><i class="fa-brands fa-facebook-f"></i></a>
+                      <a href="#" class="twiiter"><i class="fa-brands fa-google-plus"></i></a>
+                      <a href="#" class="twiiter"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="#" class="twiiter"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <hr>
+  <div class="container py-4">
+      <div class="copyright">
+          &copy; Copyright <strong>Naabz Perfume</strong>.All Rights Reserved
+      </div>
+      <div class="credits">
+          Designed By <a href="#">Naabz</a>
+      </div>
+  </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
